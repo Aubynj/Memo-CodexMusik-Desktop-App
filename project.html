@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>CodexMusik</title>
+
+    <!--<style>
+    body{
+        ackground-image: url('./assets/img/moonlight.jpg');
+    }    
+    </style>-->
+</head>
+<body>
+    <section class="container-fluid">
+        <!-- Memo Data will be display here -->
+        <section class="row resData" id="sortable">
+            
+        </section>
+    </section>  
+
+    <!-- Modal for Memo items  -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="memoModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create Your first Memo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="memo">
+                    <section class="form-group">
+                        <label for="title">Title of the Memo</label>
+                        <input type="text" class="form-control" id="title">
+                    </section>
+                    <section class="form-group">
+                        <label for="content">Content</label>
+                        <textarea id="content" cols="30" rows="10"></textarea>
+                    </section>
+
+                    <section class="form-group">
+                            <section class="row">
+                                    <section class="col-md-3">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                    </section>
+                                    <section class="col-md-6">
+                                            <span class="result"></span>
+                                    </section>
+                            </section>
+                        </section>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memo for editing -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="memoEditModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Memo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="memoEdit">
+                    <input type="hidden" id="idUniq">
+                    <section class="form-group">
+                        <label for="title">Title of the Memo</label>
+                        <input type="text" class="form-control" id="tiEdit">
+                    </section>
+                    <section class="form-group">
+                        <label for="content">Content</label>
+                        <textarea id="contEdit" cols="30" rows="10"></textarea>
+                    </section>
+
+                    <section class="form-group">
+                            <section class="row">
+                                    <section class="col-md-3">
+                                            <button type="submit" class="btn btn-primary">Edit</button>
+                                    </section>
+                                    <section class="col-md-6">
+                                            <span class="resEdit"></span>
+                                    </section>
+                            </section>
+                        </section>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memo for Deleting -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="memoDeleModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Memo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="delMemo">
+                        <input type="hidden" id="uniq">
+                        <section class="form-group">
+                            <span>Are you sure you want to delete Memo with title: <strong><span id="delTitle"></span></strong></span>
+                        </section>
+                        <section class="form-group">
+                            <section class="row">
+                                    <section class="col-md-3">
+                                            <button type="submit" class="btn btn-primary">Delete</button>
+                                    </section>
+                                    <section class="col-md-6">
+                                            <span class="resDel"></span>
+                                    </section>
+                            </section>
+                        </section>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Default dropup button -->
+    <div class="fixed-action-btn dropup">
+            <a class="btn btn-floating btn-lg dropdown-toggle red" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </a>
+            <div class="dropdown-menu">
+                <li><a class="btn btn-floating" ><i class="fa fa-address-card"></i></a></li>
+                <li><a class="btn btn-floating blue" data-toggle="modal" data-target="#memoModal"><i class="fa fa-pencil"></i></a></li>         
+            </div>
+        </div>
+    
+</body>
+    <script>window.$ = window.jQuery = require('./assets/js/jquery-3.3.1.min.js');</script>
+    <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-ui.js"></script>
+    <script text="text/javascript" src="./assets/js/wow.min.js"></script>
+    <script text="text/javascript" src="./assets/js/init.js"></script> 
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/js/projectController.js"></script>
+    <script type="text/javascript" src="./assets/js/service.js"></script>
+    <script>
+        require('./renderer.js');
+    </script>
+</html>

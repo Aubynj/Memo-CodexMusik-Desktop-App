@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Memo</title>
+    <style>
+    body{
+        background-color: dimgray
+    }
+    </style>
+</head>
+<body>
+    <section class="container-fluid">
+        <section class="row">
+            <section class="col-md-2"></section>
+            <section class="col-md-8">
+                <section class="text-center startTitl">
+                        <h1 style="color:floralwhite">Choose Your Project</h1>
+                </section>
+                <section class="row projectRes">
+                    
+                </section>
+            </section>
+            <section class="col-md-2"></section>
+        </section>
+
+        <section class="startNew">
+           <strong><span><a href="start.html">Start New Project</a></span></strong><br>  OR <br>
+           <strong><span><a href="music.html">Try our Music</a></span></strong>
+        </section>
+        <!-- Entering memo pass code -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="verifyMemo">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Verify Project</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="verify">
+                    <input type="hidden" id="projN">
+                    <section class="form-group">
+                        <span>Project Name: <strong><span class="pName"></span></strong></span>
+                    </section>
+                    <section class="form-group">
+                        <label for="content">Enter Passcode</label>
+                        <input type="password" class="form-control" id="pass">
+                    </section>
+
+                    <section class="form-group">
+                            <section class="row">
+                                    <section class="col-md-3">
+                                            <button type="submit" class="btn btn-primary">Verify</button>
+                                    </section>
+                                    <section class="col-md-6">
+                                            <span class="resVeri"></span>
+                                    </section>
+                            </section>
+                        </section>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    
+    </section>  
+    
+</body>
+    <script>window.$ = window.jQuery = require('./assets/js/jquery-3.3.1.min.js');</script>
+    <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+    <script text="text/javascript" src="./assets/js/wow.min.js"></script>
+    <script text="text/javascript" src="./assets/js/init.js"></script> 
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/js/frontCheckController.js"></script>
+    <script type="text/javascript" src="./assets/js/service.js"></script>
+    <script>
+        require('./renderer.js');
+    </script>
+</html>

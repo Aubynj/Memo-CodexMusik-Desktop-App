@@ -1,0 +1,20 @@
+{
+  "name": "Sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cryptr": "^3.0.0",
+    "electron": "^1.8.4",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^11.2.0"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

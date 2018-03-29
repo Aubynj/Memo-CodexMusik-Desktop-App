@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>CodexMusik</title>
+
+    <!--<style>
+    body{
+        ackground-image: url('./assets/img/moonlight.jpg');
+    }    
+    </style>-->
+</head>
+<body>
+    <section class="container-fluid">
+        <section class="row">
+            <section class="col-md-2"></section>
+            <section class="col-md-8">
+                <section class="myProject">
+                    <button class="btn center-btn btn-lg startProject">
+                        <span class="strtP"></span>
+                        <span class="animate-flicker"></span>
+                    </button>
+                    <br><br><br><br><br><br>
+
+                    <span class="pushImg"></span><br><br><br><br>
+                    
+                </section>
+                
+            </section>
+            <section class="col-md-2"></section>
+        </section>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="startMod">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-body">
+                    <form class="formSub">
+                        <section class="form-group">
+                            <label for="name">Project Name</label>
+                        </section>
+                        <section class="form-group">
+                            <input type="text" class="form-control" id="name">
+                        </section><br>
+                        <section class="form-group">
+                            <label for="pass">Enter passcode</label>
+                            <input type="password" class="form-control" id="passcode">
+                        </section><br>
+
+                        <section class="form-group">
+                            <section class="row">
+                                    <section class="col-md-3">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                    </section>
+                                    <section class="col-md-6">
+                                            <span class="result"></span>
+                                    </section>
+                            </section>
+                        </section>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </section>  
+</body>
+    <script>window.$ = window.jQuery = require('./assets/js/jquery-3.3.1.min.js');</script>
+    <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+    <script text="text/javascript" src="./assets/js/wow.min.js"></script>
+    <script text="text/javascript" src="./assets/js/init.js"></script> 
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/js/service.js"></script>
+    <script type="text/javascript" src="./assets/js/frontEndController.js"></script>
+    <script>
+        require('./renderer.js');
+    </script>
+</html>

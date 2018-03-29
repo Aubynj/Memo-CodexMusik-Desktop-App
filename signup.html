@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <script type="text/javascript" src="./assets/js/angular.min.js"></script>
+    <title>Sign Up</title>
+</head>
+<body>
+    
+    <section class="container">
+        <section class="row paddForm">
+            <section class="col-md-4"></section>
+            <section class="col-md-4 wow slideInUp" data-wow-duration="0.2" data-wow-delay="0.4">
+                <form method="POST">
+                    <section class="form-group">
+                        <label for="firstname">Firstname</label>
+                        <input type="text" class="form-control formlog" ng-model="firstname">
+                    </section>
+                    <section class="form-group">
+                        <label for="lastname">Lastname</label>
+                        <input type="text" class="form-control formlog" ng-model="lastname">
+                    </section>
+                    <section class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control formlog" ng-model="username">
+                    </section>
+                    
+                    <section class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control formlog" ng-model="password"> 
+                    </section>
+
+                    <section class="form-group">
+                        <button type="submit" class="btn btn-primary myLoginBtn" ng-click="signup()">Sign up</button>
+                    </section>
+
+                </form>
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </section>
+            <section class="col-md-4"></section>
+        </section>
+    </section>
+    <script>window.$ = window.jQuery = require('./assets/js/jquery-3.3.1.min.js');</script>
+    <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+    <script text="text/javascript" src="./assets/js/wow.min.js"></script>
+    <script text="text/javascript" src="./assets/js/init.js"></script> 
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/js/service.js"></script>
+    <script type="text/javascript" src="./assets/js/loginController.js"></script>
+</body>
+</html>
